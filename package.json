@@ -8,7 +8,10 @@
     "CHANGELOG.md",
     "**/*.js",
     "**/*.d.ts",
-    "**/*.d.ts.map"
+    "**/*.d.ts.map",
+    "!source",
+    "!examples",
+    "!node_modules"
   ],
   "author": "Mateusz Pietrzak",
   "license": "MIT",
@@ -16,7 +19,8 @@
     "WebGL"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "tsc --build",
+    "clean": "tsc --build --clean"
   },
   "devDependencies": {
     "tslib": "2.0.0",
