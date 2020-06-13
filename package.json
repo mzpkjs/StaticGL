@@ -1,0 +1,25 @@
+{
+  "name": "staticgl",
+  "version": "0.0.0",
+  "main": "./index.js",
+  "files": [
+    "package.json",
+    "README.md",
+    "CHANGELOG.md",
+    "**/*.js",
+    "**/*.d.ts",
+    "**/*.d.ts.map"
+  ],
+  "author": "Mateusz Pietrzak",
+  "license": "MIT",
+  "keywords": [
+    "WebGL"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "tslib": "2.0.0",
+    "typescript": "3.9.5"
+  }
+}
