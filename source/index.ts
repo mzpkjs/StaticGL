@@ -223,6 +223,9 @@ import glVertexAttribIPointer from "./glVertexAttribIPointer"
 import glVertexAttribPointer from "./glVertexAttribPointer"
 import glViewport from "./glViewport"
 import glWaitSync from "./glWaitSync"
+import webglContext from "./webglContext"
+import webglGetCurrentContext from "./webglGetCurrentContext"
+import webglMakeCurrent from "./webglMakeCurrent"
 
 
 
@@ -451,5 +454,8 @@ export {
     glVertexAttribIPointer,
     glVertexAttribPointer,
     glViewport,
-    glWaitSync
+    glWaitSync,
+    webglContext,
+    webglGetCurrentContext,
+    webglMakeCurrent
 }
