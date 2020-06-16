@@ -6,7 +6,7 @@ const unset = new Proxy({ } as WebGLRenderingContext | WebGL2RenderingContext, {
 
 let webglContext: WebGLRenderingContext | WebGL2RenderingContext = unset
 
-export function __secretly_set_current_context__(context: WebGLRenderingContext | WebGL2RenderingContext | null): boolean {
+export function __secretly_set_current_context(context: WebGLRenderingContext | WebGL2RenderingContext | null): boolean {
     if (context == null) {
         webglContext = unset
     } else {
@@ -15,12 +15,11 @@ export function __secretly_set_current_context__(context: WebGLRenderingContext 
     return true
 }
 
-
-export const isWebGL2 = (context: WebGLRenderingContext | WebGL2RenderingContext): context is WebGL2RenderingContext => {
-    return !!(context as WebGL2RenderingContext).fenceSync
+export function __secretly_bind_gl_function(propertyKey: keyof (WebGLRenderingContext | WebGL2RenderingContext)) {
+    return function bound() {
+        (webglContext[propertyKey] as Function).apply(webglContext, arguments)
+    }
 }
-
-
 
 
 

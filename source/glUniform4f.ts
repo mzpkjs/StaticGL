@@ -1,5 +1,9 @@
-const glUniform4f = (): never => {
-    throw new Error("Not implemented yet.")
+import gl  from "./webglContext"
+
+
+
+const glUniform4f = (location: WebGLUniformLocation | null, x: GLfloat, y: GLfloat, z: GLfloat, w: GLfloat): void => {
+    gl.uniform4f(location, x, y, z, w)
 }
 
 

@@ -1,4 +1,4 @@
-const glReadPixels = (): never => {
+const glReadPixels = (): void => {
     throw new Error("Not implemented yet.")
 }
 

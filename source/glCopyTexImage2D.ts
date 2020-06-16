@@ -1,5 +1,12 @@
-const glCopyTexImage2D = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glCopyTexImage2D = (
+    target: GLenum, level: GLint, internalformat: GLenum,
+    x: GLint, y: GLint, width: GLsizei, height: GLsizei, border: GLint
+): void => {
+    gl.copyTexImage2D(target, level, internalformat, x, y, width, height, border)
 }
 
 

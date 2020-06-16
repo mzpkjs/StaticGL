@@ -1,5 +1,9 @@
-const glUniform2i = (): never => {
-    throw new Error("Not implemented yet.")
+import gl  from "./webglContext"
+
+
+
+const glUniform2i = (location: WebGLUniformLocation | null, x: GLint, y: GLint): void => {
+    gl.uniform2i(location, x, y)
 }
 
 
