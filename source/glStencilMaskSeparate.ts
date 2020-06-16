@@ -1,5 +1,9 @@
-const glStencilMaskSeparate = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glStencilMaskSeparate = (face: GLenum, mask: GLuint): void => {
+    gl.stencilMaskSeparate(face, mask)
 }
 
 

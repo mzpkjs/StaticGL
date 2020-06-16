@@ -1,5 +1,9 @@
-const glPolygonOffset = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glPolygonOffset = (factor: GLfloat, units: GLfloat): void => {
+    gl.polygonOffset(factor, units)
 }
 
 

@@ -1,5 +1,9 @@
-const glViewport = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glViewport = (x: GLint, y: GLint, width: GLsizei, height: GLsizei): void => {
+    gl.viewport(x, y, width, height)
 }
 
 

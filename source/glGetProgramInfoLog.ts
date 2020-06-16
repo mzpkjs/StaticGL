@@ -1,5 +1,9 @@
-const glGetProgramInfoLog = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetProgramInfoLog = (program: WebGLProgram): string => {
+    return gl.getProgramInfoLog(program) as string
 }
 
 

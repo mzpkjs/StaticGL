@@ -4,7 +4,7 @@ const unset = new Proxy({ } as WebGLRenderingContext | WebGL2RenderingContext, {
     }
 })
 
-let webglContext = unset
+let webglContext: WebGLRenderingContext | WebGL2RenderingContext = unset
 
 export function __secretly_set_current_context__(context: WebGLRenderingContext | WebGL2RenderingContext | null): boolean {
     if (context == null) {
@@ -14,6 +14,13 @@ export function __secretly_set_current_context__(context: WebGLRenderingContext 
     }
     return true
 }
+
+
+export const isWebGL2 = (context: WebGLRenderingContext | WebGL2RenderingContext): context is WebGL2RenderingContext => {
+    return !!(context as WebGL2RenderingContext).fenceSync
+}
+
+
 
 
 

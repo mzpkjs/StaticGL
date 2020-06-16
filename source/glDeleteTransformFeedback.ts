@@ -1,5 +1,9 @@
-const glDeleteTransformFeedback = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glDeleteTransformFeedback = (tf: WebGLTransformFeedback | null): void => {
+    (gl as WebGL2RenderingContext).deleteTransformFeedback(tf)
 }
 
 

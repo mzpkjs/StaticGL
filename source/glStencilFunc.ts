@@ -1,5 +1,9 @@
-const glStencilFunc = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glStencilFunc = (func: GLenum, ref: GLint, mask: GLuint): void => {
+    gl.stencilFunc(func, ref, mask)
 }
 
 

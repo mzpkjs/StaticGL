@@ -1,5 +1,9 @@
-const glInvalidateFramebuffer = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glInvalidateFramebuffer = (target: GLenum, attachments: GLenum[]): void => {
+    (gl as WebGL2RenderingContext).invalidateFramebuffer(target, attachments)
 }
 
 

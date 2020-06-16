@@ -1,5 +1,9 @@
-const glGetAttribLocation = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetAttribLocation = (program: WebGLProgram, name: string): GLint => {
+    return gl.getAttribLocation(program, name)
 }
 
 

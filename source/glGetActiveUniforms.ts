@@ -1,5 +1,9 @@
-const glGetActiveUniforms = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetActiveUniforms = (program: WebGLProgram, uniformIndices: GLuint[], pname: GLenum): any => {
+    return (gl as WebGL2RenderingContext).getActiveUniforms(program, uniformIndices, pname)
 }
 
 

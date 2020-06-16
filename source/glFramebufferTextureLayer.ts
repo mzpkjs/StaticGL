@@ -1,5 +1,15 @@
-const glFramebufferTextureLayer = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glFramebufferTextureLayer = (
+    target: GLenum,
+    attachment: GLenum,
+    texture: WebGLTexture | null,
+    level: GLint,
+    layer: GLint
+): void => {
+    (gl as WebGL2RenderingContext).framebufferTextureLayer(target, attachment, texture, level, layer)
 }
 
 

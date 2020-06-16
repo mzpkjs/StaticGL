@@ -1,5 +1,9 @@
-const glLinkProgram = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glLinkProgram = (program: WebGLProgram): void => {
+    gl.linkProgram(program)
 }
 
 

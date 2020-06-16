@@ -1,5 +1,9 @@
-const glBindTransformFeedback = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glBindTransformFeedback = (target: GLenum, tf: WebGLTransformFeedback | null): void => {
+    (gl as WebGL2RenderingContext).bindTransformFeedback(target, tf)
 }
 
 

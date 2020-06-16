@@ -1,5 +1,9 @@
-const glCreateProgram = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glCreateProgram = (): WebGLProgram => {
+    return gl.createProgram() as WebGLProgram
 }
 
 

@@ -1,5 +1,9 @@
-const glCreateBuffer = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glCreateBuffer = (): WebGLBuffer => {
+    return gl.createBuffer() as WebGLBuffer
 }
 
 

@@ -1,5 +1,9 @@
-const glWaitSync = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glWaitSync = (sync: WebGLSync, flags: GLbitfield, timeout: GLint64): void => {
+    (gl as WebGL2RenderingContext).waitSync(sync, flags, timeout)
 }
 
 

@@ -1,5 +1,9 @@
-const glGetRenderbufferParameter = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetRenderbufferParameter = (target: GLenum, pname: GLenum): any => {
+    return gl.getRenderbufferParameter(target, pname) as any
 }
 
 

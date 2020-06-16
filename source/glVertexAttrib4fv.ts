@@ -1,5 +1,9 @@
-const glVertexAttrib4fv = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glVertexAttrib4fv = (index: GLuint, values: Float32List): void => {
+    gl.vertexAttrib4fv(index, values)
 }
 
 

@@ -1,5 +1,9 @@
-const glIsSync = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glIsSync = (sync: WebGLSync | null): GLboolean => {
+    return (gl as WebGL2RenderingContext).isSync(sync)
 }
 
 

@@ -1,5 +1,9 @@
-const glGetQueryParameter = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetQueryParameter = (query: WebGLQuery, pname: GLenum): any => {
+    return (gl as WebGL2RenderingContext).getQueryParameter(query, pname)
 }
 
 

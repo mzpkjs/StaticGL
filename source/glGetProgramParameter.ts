@@ -1,5 +1,9 @@
-const glGetProgramParameter = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetProgramParameter = (program: WebGLProgram, pname: GLenum): any => {
+    return gl.getProgramParameter(program, pname) as any
 }
 
 

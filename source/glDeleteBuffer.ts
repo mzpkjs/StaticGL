@@ -1,5 +1,9 @@
-const glDeleteBuffer = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glDeleteBuffer = (buffer: WebGLBuffer | null): void => {
+    gl.deleteBuffer(buffer)
 }
 
 

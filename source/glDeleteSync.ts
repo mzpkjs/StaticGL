@@ -1,5 +1,9 @@
-const glDeleteSync = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glDeleteSync = (sync: WebGLSync | null): void => {
+    (gl as WebGL2RenderingContext).deleteSync(sync)
 }
 
 

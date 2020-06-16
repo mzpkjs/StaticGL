@@ -1,5 +1,9 @@
-const glBlendFuncSeparate = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glBlendFuncSeparate = (srcRGB: GLenum, dstRGB: GLenum, srcAlpha: GLenum, dstAlpha: GLenum): void => {
+    gl.blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha)
 }
 
 

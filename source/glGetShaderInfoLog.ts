@@ -1,5 +1,9 @@
-const glGetShaderInfoLog = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetShaderInfoLog = (shader: WebGLShader): string => {
+    return gl.getShaderInfoLog(shader) as string
 }
 
 

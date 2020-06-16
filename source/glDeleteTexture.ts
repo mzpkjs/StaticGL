@@ -1,5 +1,9 @@
-const glDeleteTexture = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glDeleteTexture = (texture: WebGLTexture | null): void => {
+    gl.deleteTexture(texture)
 }
 
 

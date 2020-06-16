@@ -1,5 +1,9 @@
-const glGetActiveUniform = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetActiveUniform = (program: WebGLProgram, index: GLuint): WebGLActiveInfo => {
+    return gl.getActiveUniform(program, index) as WebGLActiveInfo
 }
 
 

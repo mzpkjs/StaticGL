@@ -1,5 +1,9 @@
-const glIsProgram = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glIsProgram = (program: WebGLProgram | null): GLboolean => {
+    return gl.isProgram(program)
 }
 
 

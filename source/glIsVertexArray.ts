@@ -1,5 +1,9 @@
-const glIsVertexArray = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glIsVertexArray = (vertexArray: WebGLVertexArrayObject | null): GLboolean => {
+    return (gl as WebGL2RenderingContext).isVertexArray(vertexArray)
 }
 
 

@@ -1,5 +1,9 @@
-const glDepthMask = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glDepthMask = (flag: GLboolean): void => {
+    gl.depthMask(flag)
 }
 
 

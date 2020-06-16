@@ -1,5 +1,9 @@
-const glGetUniform = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetUniform = (program: WebGLProgram, location: WebGLUniformLocation): any => {
+    return gl.getUniform(program, location) as any
 }
 
 

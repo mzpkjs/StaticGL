@@ -1,5 +1,9 @@
-const glUseProgram = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glUseProgram = (program: WebGLProgram | null): void => {
+    gl.useProgram(program)
 }
 
 

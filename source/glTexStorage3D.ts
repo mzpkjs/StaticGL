@@ -1,5 +1,9 @@
-const glTexStorage3D = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glTexStorage3D = (target: GLenum, levels: GLsizei, internalformat: GLenum, width: GLsizei, height: GLsizei, depth: GLsizei): void => {
+    (gl as WebGL2RenderingContext).texStorage3D(target, levels, internalformat, width, height, depth)
 }
 
 

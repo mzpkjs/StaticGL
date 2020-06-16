@@ -1,5 +1,9 @@
-const glGetFramebufferAttachmentParameter = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetFramebufferAttachmentParameter = (target: GLenum, attachment: GLenum, pname: GLenum): any => {
+    return gl.getFramebufferAttachmentParameter(target, attachment, pname) as any
 }
 
 

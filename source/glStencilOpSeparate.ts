@@ -1,5 +1,9 @@
-const glStencilOpSeparate = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glStencilOpSeparate = (face: GLenum, fail: GLenum, zfail: GLenum, zpass: GLenum): void => {
+    gl.stencilOpSeparate(face, fail, zfail, zpass)
 }
 
 

@@ -1,5 +1,9 @@
-const glEndTransformFeedback = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glEndTransformFeedback = (): void => {
+    (gl as WebGL2RenderingContext).endTransformFeedback()
 }
 
 

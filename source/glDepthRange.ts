@@ -1,5 +1,9 @@
-const glDepthRange = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glDepthRange = (zNear: GLclampf, zFar: GLclampf): void => {
+    gl.depthRange(zNear, zFar)
 }
 
 

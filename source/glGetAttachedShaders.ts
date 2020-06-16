@@ -1,5 +1,9 @@
-const glGetAttachedShaders = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetAttachedShaders = (program: WebGLProgram): WebGLShader[] => {
+    return gl.getAttachedShaders(program) as WebGLShader[]
 }
 
 

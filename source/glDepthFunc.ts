@@ -1,5 +1,9 @@
-const glDepthFunc = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glDepthFunc = (func: GLenum): void => {
+    gl.depthFunc(func)
 }
 
 

@@ -1,5 +1,9 @@
-const glBindVertexArray = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glBindVertexArray = (array: WebGLVertexArrayObject | null): void => {
+    (gl as WebGL2RenderingContext).bindVertexArray(array)
 }
 
 

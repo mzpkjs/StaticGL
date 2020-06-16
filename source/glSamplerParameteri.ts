@@ -1,5 +1,9 @@
-const glSamplerParameteri = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glSamplerParameteri = (sampler: WebGLSampler, pname: GLenum, param: GLint): void => {
+    (gl as WebGL2RenderingContext).samplerParameteri(sampler, pname, param)
 }
 
 

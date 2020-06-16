@@ -1,5 +1,9 @@
-const glBindRenderbuffer = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glBindRenderbuffer = (target: GLenum, renderbuffer: WebGLRenderbuffer | null): void => {
+    gl.bindRenderbuffer(target, renderbuffer)
 }
 
 

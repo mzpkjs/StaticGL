@@ -1,5 +1,9 @@
-const glCreateQuery = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glCreateQuery = (): WebGLQuery => {
+    return (gl as WebGL2RenderingContext).createQuery() as WebGLQuery
 }
 
 

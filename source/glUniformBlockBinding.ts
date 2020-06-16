@@ -1,5 +1,9 @@
-const glUniformBlockBinding = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glUniformBlockBinding = (program: WebGLProgram, uniformBlockIndex: GLuint, uniformBlockBinding: GLuint): void => {
+    (gl as WebGL2RenderingContext).uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding)
 }
 
 

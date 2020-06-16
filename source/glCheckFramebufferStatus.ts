@@ -1,5 +1,9 @@
-const glCheckFramebufferStatus = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glCheckFramebufferStatus = (target: GLenum): GLenum => {
+    return gl.checkFramebufferStatus(target)
 }
 
 

@@ -1,5 +1,9 @@
-const glIsBuffer = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glIsBuffer = (buffer: WebGLBuffer | null): GLboolean => {
+    return gl.isBuffer(buffer)
 }
 
 

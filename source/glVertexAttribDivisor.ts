@@ -1,5 +1,9 @@
-const glVertexAttribDivisor = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glVertexAttribDivisor = (index: GLuint, divisor: GLuint): void => {
+    (gl as WebGL2RenderingContext).vertexAttribDivisor(index, divisor)
 }
 
 

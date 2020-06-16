@@ -1,5 +1,9 @@
-const glGetTransformFeedbackVarying = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetTransformFeedbackVarying = (program: WebGLProgram, index: GLuint): WebGLActiveInfo => {
+    return (gl as WebGL2RenderingContext).getTransformFeedbackVarying(program, index) as WebGLActiveInfo
 }
 
 

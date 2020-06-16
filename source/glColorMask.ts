@@ -1,5 +1,9 @@
-const glColorMask = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glColorMask = (red: GLboolean, green: GLboolean, blue: GLboolean, alpha: GLboolean): void => {
+    gl.colorMask(red, green, blue, alpha)
 }
 
 

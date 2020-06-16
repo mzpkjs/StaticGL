@@ -1,5 +1,9 @@
-const glEnableVertexAttribArray = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glEnableVertexAttribArray = (index: GLuint): void => {
+    (gl as WebGL2RenderingContext).enableVertexAttribArray(index)
 }
 
 

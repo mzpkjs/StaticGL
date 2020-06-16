@@ -1,5 +1,9 @@
-const glGenerateMipmap = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGenerateMipmap = (target: GLenum): void => {
+    gl.generateMipmap(target)
 }
 
 

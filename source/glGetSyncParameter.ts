@@ -1,5 +1,9 @@
-const glGetSyncParameter = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetSyncParameter = (sync: WebGLSync, pname: GLenum): any => {
+    return (gl as WebGL2RenderingContext).getSyncParameter(sync, pname) as any
 }
 
 

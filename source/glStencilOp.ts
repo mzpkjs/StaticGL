@@ -1,5 +1,9 @@
-const glStencilOp = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glStencilOp = (fail: GLenum, zfail: GLenum, zpass: GLenum): void => {
+    gl.stencilOp(fail, zfail, zpass)
 }
 
 

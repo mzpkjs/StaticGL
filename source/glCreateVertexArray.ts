@@ -1,5 +1,9 @@
-const glCreateVertexArray = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glCreateVertexArray = (): WebGLVertexArrayObject => {
+    return (gl as WebGL2RenderingContext).createVertexArray() as WebGLVertexArrayObject
 }
 
 

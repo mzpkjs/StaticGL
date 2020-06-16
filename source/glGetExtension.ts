@@ -1,5 +1,9 @@
-const glGetExtension = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetExtension = (extensionName: string): any => {
+    return gl.getExtension(extensionName) as any
 }
 
 

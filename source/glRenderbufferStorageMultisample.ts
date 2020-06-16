@@ -1,5 +1,12 @@
-const glRenderbufferStorageMultisample = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glRenderbufferStorageMultisample = (
+    target: GLenum, samples: GLsizei, internalformat: GLenum,
+    width: GLsizei, height: GLsizei
+): void => {
+    (gl as WebGL2RenderingContext).renderbufferStorageMultisample(target, samples, internalformat, width, height)
 }
 
 

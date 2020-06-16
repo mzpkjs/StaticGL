@@ -1,5 +1,9 @@
-const glGetVertexAttrib = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetVertexAttrib = (index: GLuint, pname: GLenum): any => {
+    return gl.getVertexAttrib(index, pname) as any
 }
 
 

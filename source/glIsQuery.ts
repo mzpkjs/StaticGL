@@ -1,5 +1,9 @@
-const glIsQuery = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glIsQuery = (query: WebGLQuery | null): GLboolean => {
+    return (gl as WebGL2RenderingContext).isQuery(query)
 }
 
 

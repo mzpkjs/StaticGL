@@ -1,5 +1,9 @@
-const glDeleteSampler = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glDeleteSampler = (sampler: WebGLSampler | null): void => {
+    (gl as WebGL2RenderingContext).deleteSampler(sampler)
 }
 
 

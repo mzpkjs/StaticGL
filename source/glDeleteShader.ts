@@ -1,5 +1,9 @@
-const glDeleteShader = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glDeleteShader = (shader: WebGLShader | null): void => {
+    gl.deleteShader(shader)
 }
 
 

@@ -1,5 +1,9 @@
-const glDrawArrays = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glDrawArrays = (mode: GLenum, first: GLint, count: GLsizei): void => {
+    gl.drawArrays(mode, first, count)
 }
 
 

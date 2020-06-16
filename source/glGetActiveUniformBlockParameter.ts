@@ -1,5 +1,9 @@
-const glGetActiveUniformBlockParameter = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetActiveUniformBlockParameter = (program: WebGLProgram, uniformBlockIndex: GLuint, pname: GLenum): any => {
+    return (gl as WebGL2RenderingContext).getActiveUniformBlockParameter(program, uniformBlockIndex, pname)
 }
 
 

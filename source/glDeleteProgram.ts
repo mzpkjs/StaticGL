@@ -1,5 +1,9 @@
-const glDeleteProgram = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glDeleteProgram = (program: WebGLProgram | null): void => {
+    gl.deleteProgram(program)
 }
 
 

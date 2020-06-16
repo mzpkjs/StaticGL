@@ -1,5 +1,9 @@
-const glGetShaderSource = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetShaderSource = (shader: WebGLShader): string => {
+    return gl.getShaderSource(shader) as string
 }
 
 

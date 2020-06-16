@@ -1,5 +1,9 @@
-const glFinish = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glFinish = (): void => {
+    gl.finish()
 }
 
 

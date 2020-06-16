@@ -1,5 +1,9 @@
-const glGetActiveAttrib = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glGetActiveAttrib = (program: WebGLProgram, index: GLuint): WebGLActiveInfo => {
+    return gl.getActiveAttrib(program, index) as WebGLActiveInfo
 }
 
 

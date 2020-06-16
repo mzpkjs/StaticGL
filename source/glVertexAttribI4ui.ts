@@ -1,5 +1,9 @@
-const glVertexAttribI4ui = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glVertexAttribI4ui = (index: GLuint, x: GLuint, y: GLuint, z: GLuint, w: GLuint): void => {
+    (gl as WebGL2RenderingContext).vertexAttribI4ui(index, x, y, z, w)
 }
 
 

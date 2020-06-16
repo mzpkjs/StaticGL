@@ -1,5 +1,9 @@
-const glCreateRenderbuffer = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glCreateRenderbuffer = (): WebGLRenderbuffer => {
+    return gl.createRenderbuffer() as WebGLRenderbuffer
 }
 
 

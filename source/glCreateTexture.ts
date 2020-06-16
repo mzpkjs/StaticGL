@@ -1,5 +1,9 @@
-const glCreateTexture = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glCreateTexture = (): WebGLTexture => {
+    return gl.createTexture() as WebGLTexture
 }
 
 

@@ -1,5 +1,9 @@
-const glHint = (): never => {
-    throw new Error("Not implemented yet.")
+import gl from "./webglContext"
+
+
+
+const glHint = (target: GLenum, mode: GLenum): void => {
+    gl.hint(target, mode)
 }
 
 
